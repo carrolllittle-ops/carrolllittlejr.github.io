@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carroll Little Jr. — Enterprise IT Program Leader</title>
+<style>
+  :root{
+    --slate:#1F2A3D; --slate2:#2A3850; --slatedeep:#13192A;
+    --bronze:#A66E3C; --bronzelt:#C28A52; --bronzeso:#8B5A2E;
+    --paper:#F4EFE4; --paper2:#EDE6D6; --line:#D9D2C0; --steel:#8E8B82;
+    --maxw:1060px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--slate);background:var(--paper);
+    -webkit-font-smoothing:antialiased;line-height:1.6;font-weight:400;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;}
+  .eyebrow{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:3.5px;
+    font-weight:700;text-transform:uppercase;color:var(--bronze);}
+  a{color:inherit;}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--slate) 0%,var(--slate2) 100%);color:#fff;position:relative;overflow:hidden;padding:100px 0 84px;}
+  .hero::before{content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='%23A66E3C' stroke-width='0.4' opacity='0.08'/></svg>");pointer-events:none;}
+  .hero .wrap{position:relative;z-index:1;}
+  .avail{display:inline-flex;align-items:center;gap:9px;margin-bottom:28px;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:.5px;color:#9AA3B0;}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--bronzelt);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(194,138,82,.55);}70%{box-shadow:0 0 0 12px rgba(194,138,82,0);}100%{box-shadow:0 0 0 0 rgba(194,138,82,0);}}
+  .hero h1{font-size:56px;line-height:1.08;font-weight:700;letter-spacing:-.4px;margin:8px 0 22px;}
+  .hero h1 .accent{color:var(--bronzelt);font-style:italic;}
+  .hero .lede{font-size:20px;color:#D6DCE5;max-width:700px;line-height:1.55;}
+  .hero .name-tag{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:2px;color:#9AA3B0;margin-top:32px;text-transform:uppercase;}
+
+  section{padding:80px 0;}
+  .snum{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;color:var(--bronze);letter-spacing:2.5px;margin-bottom:12px;text-transform:uppercase;}
+  h2.sec{font-size:34px;font-weight:700;letter-spacing:-.2px;margin-bottom:24px;line-height:1.2;}
+  .rule{height:2px;width:64px;background:var(--bronze);margin-bottom:32px;}
+
+  .thesis p{font-size:19px;line-height:1.7;max-width:760px;color:#2B3447;}
+  .thesis p + p{margin-top:20px;}
+  .thesis .pull{font-size:25px;font-weight:700;color:var(--slate);line-height:1.4;font-style:italic;}
+
+  .lanes{background:var(--paper2);}
+  .lane-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .lane{background:#fff;border:1px solid var(--line);border-top:3px solid var(--bronze);padding:30px 28px;border-radius:1px;}
+  .lane h3{font-size:21px;margin-bottom:8px;line-height:1.3;}
+  .lane .lane-sub{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);font-weight:700;margin-bottom:14px;}
+  .lane p{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.65;color:#4A5260;}
+
+  /* Programs (Carroll's record is built around named programs) */
+  .programs .prog{display:grid;grid-template-columns:160px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start;}
+  .programs .prog:last-child{border-bottom:none;}
+  .prog-meta{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:var(--bronzeso);letter-spacing:.5px;line-height:1.5;}
+  .prog-meta b{display:block;color:var(--slate);font-weight:700;font-size:13px;margin-bottom:4px;}
+  .prog-title{font-size:22px;font-weight:700;margin-bottom:8px;line-height:1.3;}
+  .prog-line{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.7;color:#4A5260;margin-bottom:12px;}
+  .prog-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+  .tag{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.5px;color:var(--bronzeso);
+    border:1px solid var(--line);padding:4px 9px;border-radius:1px;background:var(--paper);}
+
+  /* PROOF */
+  .proof{background:linear-gradient(135deg,var(--slatedeep) 0%,var(--slate) 100%);color:#fff;position:relative;overflow:hidden;}
+  .proof::before{content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='%23A66E3C' stroke-width='0.4' opacity='0.06'/></svg>");}
+  .proof .wrap{position:relative;z-index:1;}
+  .proof .snum{color:var(--bronzelt);}
+  .proof h2.sec{color:#fff;}
+  .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 24px;margin:8px 0 46px;}
+  .num .big{font-size:44px;font-weight:700;color:var(--bronzelt);line-height:1;}
+  .num .lab{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#D6DCE5;margin-top:10px;line-height:1.5;}
+  .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(194,138,82,.3);padding-top:36px;}
+  .feat .fitem h4{font-size:16px;color:var(--bronzelt);margin-bottom:8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.5px;font-weight:700;}
+  .feat .fitem p{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13.5px;color:#D6DCE5;line-height:1.6;}
+
+  .pov-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .note{border-left:3px solid var(--bronze);padding:4px 0 4px 22px;}
+  .note h4{font-size:18px;margin-bottom:8px;line-height:1.3;}
+  .note p{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.7;color:#4A5260;}
+
+  .contact{background:var(--slate);color:#fff;text-align:center;padding:84px 0;}
+  .contact h2{font-size:38px;font-weight:700;margin-bottom:16px;color:#fff;}
+  .contact p{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#D6DCE5;font-size:17px;max-width:600px;margin:0 auto 34px;line-height:1.6;}
+  .cta{display:inline-block;background:var(--bronze);color:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.8px;padding:15px 36px;border-radius:1px;text-decoration:none;transition:background .2s;text-transform:uppercase;}
+  .cta:hover{background:var(--bronzelt);}
+  .channels{margin-top:34px;display:flex;gap:32px;justify-content:center;flex-wrap:wrap;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#9AA3B0;letter-spacing:.5px;}
+  .channels a{color:#D6DCE5;text-decoration:none;border-bottom:1px solid rgba(194,138,82,.4);padding-bottom:2px;}
+  .channels a:hover{color:var(--bronzelt);}
+  footer{background:var(--slatedeep);color:#8E928D;text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;padding:24px;letter-spacing:.5px;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:880px){
+    .hero h1{font-size:40px;}
+    .lane-grid,.nums,.feat,.pov-grid{grid-template-columns:1fr 1fr;}
+    .programs .prog{grid-template-columns:1fr;gap:12px;}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 22px;}
+    .hero h1{font-size:33px;}
+    .lane-grid,.nums,.feat,.pov-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 01 HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="avail"><span class="dot"></span> Exploring senior program-leadership roles · Available 2026</div>
+    <div class="eyebrow">Enterprise Program Leadership · PMO · Governance</div>
+    <h1>Delivering complex initiatives<br>on time and <span class="accent">on budget</span>.</h1>
+    <p class="lede">Twenty-plus years leading enterprise transformation at Fortune 500 utilities — Oracle financial modernization, 10.5M-customer data migration, regulatory governance across 4,600+ critical assets in 15 business units.</p>
+    <div class="name-tag">Carroll Little Jr., MBA · PMP · ITIL · Hanover, MD</div>
+  </div>
+</header>
+
+<!-- 02 THESIS -->
+<section class="thesis">
+  <div class="wrap reveal">
+    <div class="snum">01 — The Thesis</div>
+    <h2 class="sec">Execution discipline at enterprise scale.</h2>
+    <div class="rule"></div>
+    <p class="pull">The hard part of enterprise transformation isn't the technology. It's the discipline to keep dozens of teams aligned for years.</p>
+    <p>Most multimillion-dollar programs don't fail because the chosen platform was wrong. They fail because the governance underneath them was loose — milestones drifted, risks went unsurfaced, executive reporting became theater. By the time anyone noticed, the budget was gone.</p>
+    <p>My twenty years inside Fortune 500 utilities have been a continuous lesson in the opposite: how to build the operating system that makes complex programs deliver. Standards that hold across business units. RAID/RIDAC processes leaders actually trust. KPI dashboards that surface the truth, not the narrative. That is the work — and it is why I get hired.</p>
+  </div>
+</section>
+
+<!-- 03 LANES -->
+<section class="lanes">
+  <div class="wrap reveal">
+    <div class="snum">02 — How I Create Value</div>
+    <h2 class="sec">Three lanes where my record holds up.</h2>
+    <div class="rule"></div>
+    <div class="lane-grid">
+      <div class="lane">
+        <div class="lane-sub">Lane A · Primary</div>
+        <h3>Enterprise Program &amp; Portfolio Leadership</h3>
+        <p>PMO leadership, program governance, executive reporting, and large-scale transformation. The operating system that keeps multimillion-dollar programs on track across years and across business units.</p>
+      </div>
+      <div class="lane">
+        <div class="lane-sub">Lane B</div>
+        <h3>ERP / Oracle / Data Modernization</h3>
+        <p>Enterprise financial-system implementation and large-scale data conversion — the Oracle CC&amp;B migration that moved 10.5M customers in 76 hours, the Apollo financial transformation now underway.</p>
+      </div>
+      <div class="lane">
+        <div class="lane-sub">Lane C</div>
+        <h3>Regulatory, Compliance &amp; Risk</h3>
+        <p>NERC CIP governance and audit-readiness, with AI-augmented operations. Compliance frameworks adopted across 15 business units; zero audit findings across multiple regulatory cycles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PROGRAMS (Carroll's record is best told as named programs, not a timeline) -->
+<section class="programs">
+  <div class="wrap reveal">
+    <div class="snum">03 — Selected Programs</div>
+    <h2 class="sec">The work, told in programs.</h2>
+    <div class="rule"></div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Exelon · Apollo</b>2024 — Present<br>IT Program Monitor &amp; Controls Manager</div>
+      <div>
+        <div class="prog-title">Enterprise Financial Transformation.</div>
+        <p class="prog-line">Program governance and controls for the multi-year Apollo program — replacing Exelon's legacy financial systems with Oracle. KPI dashboards and program-health metrics enabling real-time decision support. Risk, issue, and change management (RIDAC) across leadership.</p>
+        <div class="prog-tags"><span class="tag">PMO</span><span class="tag">Governance</span><span class="tag">Oracle ERP</span><span class="tag">Executive Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Exelon · CC&amp;B</b>2020 — 2024<br>Principal Project Manager — Data Conversion</div>
+      <div>
+        <div class="prog-title">10.5M-customer Oracle CC&amp;B migration.</div>
+        <p class="prog-line">Directed the data conversion consolidating multiple legacy Customer Information Management systems into a unified Oracle Customer Care &amp; Billing platform. Led a 56-person global team (22 onshore, 34 offshore). Converted 10.5M customers from two utilities in 76 hours — beating the 100-hour target — at 99.9% completeness and accuracy.</p>
+        <div class="prog-tags"><span class="tag">Oracle CC&amp;B</span><span class="tag">Global Team Leadership</span><span class="tag">Data Migration</span><span class="tag">Vendor Management</span></div>
+      </div>
+    </div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Exelon · NERC CIP</b>2014 — 2020<br>NERC CIP Compliance Lead / Sr. SME</div>
+      <div>
+        <div class="prog-title">Compliance program across 4,600+ critical assets.</div>
+        <p class="prog-line">Designed enterprise compliance frameworks and governance models adopted across 15 business units, standardizing NERC CIP processes for 4,600+ critical assets. Delivered zero audit findings across multiple regulatory audits. Guided implementation of CIP-007 R2, CIP-010 R1/R2/R3. Exelon NERC CIP Compliance Achievement Award, 2018.</p>
+        <div class="prog-tags"><span class="tag">NERC CIP</span><span class="tag">Audit-Ready Operations</span><span class="tag">Risk Management</span><span class="tag">Frameworks</span></div>
+      </div>
+    </div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Exelon · Retail</b>2012 — 2014<br>IT Project Manager — Commercial</div>
+      <div>
+        <div class="prog-title">Parallel CRM upgrades on a $1.5M budget.</div>
+        <p class="prog-line">Delivered two parallel, interdependent CRM application and database upgrade projects — on budget at $1.5M, on schedule. Business-case development, financial oversight, and full lifecycle delivery across web marketing, sales, and product development platforms.</p>
+        <div class="prog-tags"><span class="tag">Project Management</span><span class="tag">CRM</span><span class="tag">Business Cases</span></div>
+      </div>
+    </div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Constellation Energy</b>2011 — 2012<br>QA Program Manager</div>
+      <div>
+        <div class="prog-title">A Quality Assurance Center of Excellence.</div>
+        <p class="prog-line">Established a QA Center of Excellence within the Enterprise PMO, standardizing testing and governance across enterprise initiatives. Built and led the QA organization examining 25+ concurrent projects within seven months of inception.</p>
+        <div class="prog-tags"><span class="tag">QA</span><span class="tag">PMO</span><span class="tag">Center of Excellence</span></div>
+      </div>
+    </div>
+
+    <div class="prog">
+      <div class="prog-meta"><b>Constellation Energy</b>2006 — 2011<br>Production Support Manager &amp; Lead Analyst</div>
+      <div>
+        <div class="prog-title">Enterprise CRM and billing across six regions.</div>
+        <p class="prog-line">Led production support for the consolidated Siebel / Lodestar / Tibco platform — Sales, Customer Care, Contract Administration, Pricing, Billing, Product Configuration. Redesigned production code-release processes that improved quality control and increased throughput.</p>
+        <div class="prog-tags"><span class="tag">Siebel</span><span class="tag">Production Support</span><span class="tag">Release Management</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PROOF -->
+<section class="proof">
+  <div class="wrap reveal">
+    <div class="snum">04 — Proof</div>
+    <h2 class="sec">The numbers.</h2>
+    <div class="nums">
+      <div class="num"><div class="big">20+</div><div class="lab">Years of Fortune 500 IT program leadership</div></div>
+      <div class="num"><div class="big">10.5M</div><div class="lab">Customers migrated in a single Oracle CC&amp;B conversion</div></div>
+      <div class="num"><div class="big">76 hrs</div><div class="lab">Conversion window — beating the 100-hour target</div></div>
+      <div class="num"><div class="big">99.9%</div><div class="lab">Completeness &amp; accuracy on CC&amp;B conversion controls</div></div>
+      <div class="num"><div class="big">4,600+</div><div class="lab">Critical assets under NERC CIP compliance program</div></div>
+      <div class="num"><div class="big">15</div><div class="lab">Business units standardized under one compliance framework</div></div>
+      <div class="num"><div class="big">0</div><div class="lab">Audit findings across multiple regulatory cycles</div></div>
+      <div class="num"><div class="big">56</div><div class="lab">Person global team led on CC&amp;B (22 onshore, 34 offshore)</div></div>
+    </div>
+    <div class="feat">
+      <div class="fitem"><h4>Execution Discipline</h4><p>Multimillion-dollar transformation programs delivered on schedule and on budget, year after year.</p></div>
+      <div class="fitem"><h4>Operational Transparency</h4><p>Governance, RAID/RIDAC processes, and executive reporting that leaders actually trust.</p></div>
+      <div class="fitem"><h4>Frameworks That Hold</h4><p>Compliance and program standards adopted across business units — operating systems, not one-off deliverables.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 POV -->
+<section class="pov">
+  <div class="wrap reveal">
+    <div class="snum">05 — Point of View</div>
+    <h2 class="sec">How I think about the work.</h2>
+    <div class="rule"></div>
+    <div class="pov-grid">
+      <div class="note"><h4>Governance is not bureaucracy.</h4><p>Done well, governance is the thing that lets a complex program move fast safely. Done poorly, it slows everyone down without protecting anyone. The difference is whether the standards solve real problems leaders see — or just generate artifacts.</p></div>
+      <div class="note"><h4>RAID is a leadership tool.</h4><p>Risks, Assumptions, Issues, and Dependencies are the language a program uses to talk to its executives. If your RAID log is full but the conversation in the steering committee is theatrical, the log isn't doing its job. Make it the agenda.</p></div>
+      <div class="note"><h4>Zero findings is a system.</h4><p>You don't get to zero audit findings by trying harder during the audit. You get there by building processes that produce audit evidence as a byproduct of the day-to-day work — so the audit is a review, not a scramble.</p></div>
+      <div class="note"><h4>People exceed their job descriptions.</h4><p>Coaching and mentoring isn't a soft layer on top of delivery — it is delivery. The teams that hit hard milestones in hard environments are the ones where individuals know someone is invested in them growing past the role they were hired into.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk about what's next.</h2>
+    <p>If you're running an enterprise transformation that needs senior program leadership — or building a PMO that takes governance seriously — I'd welcome the conversation.</p>
+    <a class="cta" href="Carroll_Little_Resume.pdf" download>Download Resume</a>
+    <div class="channels">
+      <a href="mailto:carroll.little@gmail.com">carroll.little@gmail.com</a>
+      <a href="https://www.linkedin.com/in/carrolllittlejr">LinkedIn</a>
+      <span>410-419-4341 · Hanover, MD</span>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Carroll Little Jr., MBA, PMP, ITIL · Enterprise Program Leadership</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
